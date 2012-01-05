@@ -1,15 +1,14 @@
-import roboguice.config.AbstractAndroidModule;
-import android.app.Activity;
+import com.cannedapps.currencycalculator.app.views.interfaces.ICurrencyCalculatorActivity;
+import com.google.inject.AbstractModule;
 
-import com.cannedapps.currencycalculator.app.views.CurrencyCalculatorActivity;
+import fakes.TestingCurrencyCalculatorActivity;
 
-
-public class InjectedMockActivityModule extends AbstractAndroidModule {
+public class InjectedMockActivityModule extends AbstractModule {
 
   @Override
   protected void configure() {
-    
-    bind(Activity.class).to(CurrencyCalculatorActivity.class);
+
+    bind(ICurrencyCalculatorActivity.class).to(TestingCurrencyCalculatorActivity.class);
   }
 
 }

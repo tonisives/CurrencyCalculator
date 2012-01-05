@@ -1,7 +1,10 @@
 package fakes;
 
+import roboguice.inject.ContextSingleton;
+
 import com.cannedapps.currencycalculator.app.views.interfaces.ICurrencyCalculatorActivity;
 
+@ContextSingleton
 public class TestingCurrencyCalculatorActivity implements ICurrencyCalculatorActivity {
 
   public String mValue;

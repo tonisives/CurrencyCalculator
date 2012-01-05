@@ -14,4 +14,9 @@ public class AppModule extends AbstractModule {
   protected void configure() {
     bind(ICurrencyCalculatorActivity.class).to(CurrencyCalculatorActivity.class);
   }
-}
+
+} 
+
+  
+  
+

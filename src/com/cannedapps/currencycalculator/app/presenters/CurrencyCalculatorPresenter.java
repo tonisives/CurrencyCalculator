@@ -7,15 +7,12 @@ import com.cannedapps.currencycalculator.app.models.Currency;
 import com.cannedapps.currencycalculator.app.views.interfaces.ICurrencyCalculatorActivity;
 import com.google.inject.Inject;
 
-//@ContextScoped
 public class CurrencyCalculatorPresenter /*extends AbstractCannedappsPresenter<ICurrencyCalculatorActivity> */{
 
   @Inject ICurrencyCalculatorActivity activity;
   
   public void convert(String value, String fromCurrency, String toCurrency) {
-   
-    // badly need context
-    
+       
     String convertedValue = "";
     try {
       double dValue = Double.valueOf(value);

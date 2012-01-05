@@ -40,5 +40,9 @@ public class CurrencyCalculatorPresenter /*extends AbstractCannedappsPresenter<I
     }
     return currencies;
   }
+  
+  public ICurrencyCalculatorActivity getActivity() {
+	  return activity;
+  }
 
 }

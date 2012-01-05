@@ -1,0 +1,8 @@
+tmp/
+bin/
+gen/
+out/
+.idea/
+AndroidIntroApp.iml
+.DS_Store
+local.properties

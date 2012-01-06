@@ -9,6 +9,6 @@
 	<classpathentry kind="lib" path="/CurrencyCalculator/lib/guice-3.0-no_aop.jar"/>
 	<classpathentry kind="lib" path="/CurrencyCalculator/lib/javax.inject-1.jar"/>
 	<classpathentry kind="lib" path="/CurrencyCalculator/lib/roboguice-2.0b3.jar"/>
-	<classpathentry kind="var" path="ANDROID_SDK/platforms/android-8/android.jar"/>
+	<classpathentry kind="lib" path="/Users/ttiganik/Documents/workspaceH/LIBS/android-sdk-mac_x86/platforms/android-8/android.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

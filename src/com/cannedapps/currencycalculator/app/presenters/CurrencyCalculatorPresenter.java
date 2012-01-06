@@ -5,12 +5,9 @@ import java.util.List;
 
 import com.cannedapps.currencycalculator.app.models.Currency;
 import com.cannedapps.currencycalculator.app.views.interfaces.ICurrencyCalculatorActivity;
-import com.google.inject.Inject;
 
-public class CurrencyCalculatorPresenter /*extends AbstractCannedappsPresenter<ICurrencyCalculatorActivity> */{
+public class CurrencyCalculatorPresenter extends AbstractCannedappsPresenter<ICurrencyCalculatorActivity> {
 
-  @Inject ICurrencyCalculatorActivity activity;
-  
   public void convert(String value, String fromCurrency, String toCurrency) {
        
     String convertedValue = "";
@@ -25,8 +22,7 @@ public class CurrencyCalculatorPresenter /*extends AbstractCannedappsPresenter<I
       // TODO: handle exception
     }
 
-//    getView().showConvertValue(convertedValue);
-    activity.showConvertValue(convertedValue);
+    getView().showConvertValue(convertedValue);
   }
 
   public String[] getCurrencies() {
@@ -39,10 +35,6 @@ public class CurrencyCalculatorPresenter /*extends AbstractCannedappsPresenter<I
       i++;
     }
     return currencies;
-  }
-  
-  public ICurrencyCalculatorActivity getActivity() {
-	  return activity;
   }
 
 }

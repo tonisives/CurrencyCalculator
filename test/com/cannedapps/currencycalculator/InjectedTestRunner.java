@@ -6,6 +6,8 @@ import org.junit.runners.model.InitializationError;
 
 import roboguice.RoboGuice;
 
+import android.app.Activity;
+
 import com.google.inject.Module;
 import com.google.inject.util.Modules;
 import com.xtremelabs.robolectric.Robolectric;
@@ -20,7 +22,7 @@ public class InjectedTestRunner extends RobolectricTestRunner {
   public void prepareTest(Object test) {
     Module module = Modules.override(RoboGuice.newDefaultRoboModule(Robolectric.application)).with(new MockActivitiesModule());
     RoboGuice.setBaseApplicationInjector(Robolectric.application, RoboGuice.DEFAULT_STAGE, module);
-    RoboGuice.getInjector(Robolectric.application).injectMembers(test);
+    RoboGuice.getInjector(new Activity()).injectMembers(test);
   }
 
   @Override

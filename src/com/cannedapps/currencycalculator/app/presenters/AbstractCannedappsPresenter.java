@@ -6,15 +6,15 @@ import com.google.inject.Inject;
 
 public abstract class AbstractCannedappsPresenter<T> {
 
-  @Inject Activity activity;
+  @Inject private Activity activity;
+  @Inject private T view;
   
-  @SuppressWarnings("unchecked")
   T getView() {
-    return (T) activity;
+    return view;
   }
   
   Activity getActivity() {
     return activity;
   }
-  
+
 }

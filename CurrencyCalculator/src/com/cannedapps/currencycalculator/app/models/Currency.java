@@ -33,7 +33,7 @@ public class Currency {
 
   public static Currency getCurrency(String name) {
     List<Currency> currencies = getAll();
-    for (Iterator iterator = currencies.iterator(); iterator.hasNext();) {
+    for (Iterator<Currency> iterator = currencies.iterator(); iterator.hasNext();) {
       Currency currency = (Currency) iterator.next();
       if (currency.getName().equalsIgnoreCase(name)) {
         return currency;

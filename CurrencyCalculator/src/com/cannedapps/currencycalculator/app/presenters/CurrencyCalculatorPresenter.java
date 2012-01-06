@@ -29,7 +29,7 @@ public class CurrencyCalculatorPresenter extends AbstractCannedappsPresenter<ICu
     List<Currency> all = Currency.getAll();
     String[] currencies = new String[all.size()];
     int i = 0;
-    for (Iterator iterator = all.iterator(); iterator.hasNext();) {
+    for (Iterator<Currency> iterator = all.iterator(); iterator.hasNext();) {
       Currency currency = (Currency) iterator.next();
       currencies[i] = currency.getName();
       i++;
